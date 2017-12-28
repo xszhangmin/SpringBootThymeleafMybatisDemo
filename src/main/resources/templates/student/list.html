@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <title>学生列表</title>
+    <link href="css/main.css" rel="stylesheet"  type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+</head>
+<body>
+<h1>Demo</h1>
+<h2>学生列表</h2>
+
+<table width="400" border="1" cellspacing="0" cellpadding="0">
+    <thead>
+    <tr>
+        <th width="105">学生序号</th>
+        <th width="105">学生姓名</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student:${students}">
+        <td width="105"   th:text="${student.id}">序号</td>
+        <td width="105"  th:text="${student.name}">姓名</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

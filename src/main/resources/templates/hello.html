@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<script th:inline="javascript">
+    $(function(){
+        alert(1);
+        $.ajax({
+            url:"/hi",
+                data:{},
+            type:"get",
+            dataType:"text",
+            success:function(text){
+            alert(text);
+
+            }
+        });
+        });
+</script>
+<!--/*@thymesVar id="name" type="java.lang.String"*/-->
+<p th:text="'Hello！, ' + ${name} + '!'" >3333</p>
+</body>
+</html>
